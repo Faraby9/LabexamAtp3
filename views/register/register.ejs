@@ -6,24 +6,23 @@
 </head>
 <body>
    
-
 <fieldset>
 	<legend>Register</legend>
 	<form method="post" >
- <a href="/home">Back</a> | 
-	<a href="/logout">logout</a>
+ <a href="/Homepage">Back</a> | 
+	<a href="/Homepage">logout</a>
 	<table>
 		<tr>
 			<td>Username:</td>
-			<td><input type="text" name="username"></td>
+			<td><input type="text" name="username"  value="<%= locals.username %>"></td>
 		</tr>
 		<tr>
 			<td>Password:</td>
-			<td><input type="password" name="password"></td>
+			<td><input type="password" name="password"  value="<%= locals.password %>"></td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td><select>
+            <td>type:</td>
+            <td><select  value="<%= locals.type %>" >
                 <option value="Admin">Admin</option>
                 <option value="General User">General User</option>
                 <option value="Scout">Scout</option>

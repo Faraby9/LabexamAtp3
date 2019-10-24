@@ -68,5 +68,19 @@ module.exports = {
 				});
 			}
 		});
-	}
-}
+	},
+	execute1 : function(sql, callback){
+		getConnection(function (connection){
+
+			
+				connection.query(sql, function (error, results) {
+					if(error){
+						callback(false);
+					}else{
+						callback(true);
+					}
+				});
+			
+			
+		});
+	}}

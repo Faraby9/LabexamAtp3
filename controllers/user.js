@@ -18,14 +18,6 @@ router.get('/adduser', function(request, response){
 	response.render("user/adduser");
 });
 
-router.get('/', function(request, response){
-	response.render("register/register");
-	
-	userModel.insert(user.params.username,function(result){
-		response.render('register/register',{register: results},);
-
-	
-});
 
 
 router.get('/userList', function(request, response){
@@ -88,6 +80,5 @@ router.get('/details/:id', function(request, response){
 });
 
 module.exports = router;
-
 
 
