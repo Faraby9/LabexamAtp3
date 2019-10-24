@@ -5,10 +5,13 @@
 	<link rel="stylesheet" type="text/css" href="/Style/style.css">
 </head>
 <body>
+   
 
 <fieldset>
-	<legend>Login</legend>
+	<legend>Register</legend>
 	<form method="post" >
+ <a href="/home">Back</a> | 
+	<a href="/logout">logout</a>
 	<table>
 		<tr>
 			<td>Username:</td>
@@ -17,7 +20,16 @@
 		<tr>
 			<td>Password:</td>
 			<td><input type="password" name="password"></td>
-		</tr>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td><select>
+                <option value="Admin">Admin</option>
+                <option value="General User">General User</option>
+                <option value="Scout">Scout</option>
+            
+              </select></td>
+        </tr>
 		<tr>
 			<td><input type="submit" name="submit" value="Submit"></td>
 			<td></td>

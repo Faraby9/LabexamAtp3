@@ -1,0 +1,34 @@
+body
+{
+    background-color: blueviolet;
+}
+h1
+{
+    text-align: center;
+}
+#hat1
+{
+    list-style-type: none;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0px;
+    min-height: 38px;
+    background-color: burlywood;
+}
+#menu li
+{
+    float: left;
+}
+#menu li a
+{
+    text-decoration: none;
+    color:black ;
+    padding: 10px 30px;
+    display: block;
+    transition: 0.3s all ease;
+}
+#menu li a:hover 
+{
+    background-color:rgb(17, 2, 2);;
+    color:white;
+}

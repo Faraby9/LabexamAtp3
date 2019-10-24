@@ -7,8 +7,10 @@ var ejs = require('ejs');
 var login = require('./controllers/login');
 var home = require('./controllers/home');
 var user = require('./controllers/user');
+
 var logout = require('./controllers/logout');
 var app = express();
+var Homepage=require('./controllers/Homepage');
 
 
 //CONFIGURATION
@@ -18,16 +20,20 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expSession({secret:'my top secret value', saveUninitialized:true, resave: false}));
 app.use(cookieParser());
-app.use('/abc', express.static('xyz'))
+//app.use('/abc', express.static('xyz'));
+app.use('/Style', express.static('Css'));
 app.use('/login', login);
 app.use('/home', home);
+app.use('/Homepage',Homepage);
 app.use('/user', user);
 app.use('/logout', logout);
+app.use('/register',user);
 
 
 //ROUTER
 app.get('/', function(request, response){
-	response.send('index page!');
+	//response.send('index page!');
+	response.render('Homepage/index');
 });
 
 app.get('/test/your/:name/:id', function(request, response){

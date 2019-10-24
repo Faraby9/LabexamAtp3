@@ -18,6 +18,11 @@ router.get('/adduser', function(request, response){
 	response.render("user/adduser");
 });
 
+router.get('/', function(request, response){
+	response.render("register/register");
+});
+
+
 router.get('/userList', function(request, response){
 		
 		userModel.getAll(function(results){
