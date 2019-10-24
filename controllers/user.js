@@ -20,6 +20,11 @@ router.get('/adduser', function(request, response){
 
 router.get('/', function(request, response){
 	response.render("register/register");
+	
+	userModel.insert(user.params.username,function(result){
+		response.render('register/register',{register: results},);
+
+	
 });
 
 

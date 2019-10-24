@@ -38,8 +38,8 @@ module.exports = {
 	},
 	insert: function(user, callback){
 
-		var sql ="insert into user values('', ?, ?)";
-		db.execute(sql, [user.username, user.password], function(status){
+		var sql ="insert into user values('', ?, ?,?)";
+		db.execute(sql, [user.username, user.password,user.type], function(status){
 			callback(status);
 		});
 	},
