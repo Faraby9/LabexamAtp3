@@ -80,5 +80,6 @@ router.get('/details/:id', function(request, response){
 });
 
 module.exports = router;
+module.exports=router;
 
 

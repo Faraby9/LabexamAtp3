@@ -13,6 +13,7 @@ var app = express();
 var Homepage=require('./controllers/Homepage');
 
 
+
 //CONFIGURATION
 app.set('view engine', 'ejs');
 
@@ -35,7 +36,9 @@ app.get('/', function(request, response){
 	//response.send('index page!');
 	response.render('Homepage/index');
 });
-
+app.post('/',function(request,response){
+response.render('register/register');
+});
 
 
 

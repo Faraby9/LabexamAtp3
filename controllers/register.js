@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(request, response){
     response.render("register/register");
 });
-router.post('/register', function(request, response){
+router.post('/', function(request, response){
 
 	var user = {
 		username: request.body.username,

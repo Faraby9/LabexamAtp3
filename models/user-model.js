@@ -42,14 +42,14 @@ module.exports = {
 		db.execute(sql, [user.username, user.password], function(status){
 			callback(status);
 		});
-	},
-	insert1: function(user, callback){
+	},insert1: function(user, callback){
 
 		var sql ="insert into user values('', ?, ?,?)";
-		db.execute1(sql, function(status){
+		db.execute(sql, [user.username, user.password,user.type], function(status){
 			callback(status);
 		});
 	},
+	
 	update: function(user, callback){
 		var sql ="update user set username=?, password=? where id=?";
 	

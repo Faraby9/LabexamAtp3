@@ -69,10 +69,21 @@ module.exports = {
 			}
 		});
 	},
-	execute1 : function(sql, callback){
+	execute1 : function(sql, params, callback){
 		getConnection(function (connection){
 
-			
+			if(params != null){
+				connection.query(sql, params, function (error, results) {
+					if(error){
+						callback(false);
+					}else{
+						callback(true);
+					}
+				});
+				connection.end(function(err){
+					console.log('connection end...');
+				});
+			}else{
 				connection.query(sql, function (error, results) {
 					if(error){
 						callback(false);
@@ -80,7 +91,10 @@ module.exports = {
 						callback(true);
 					}
 				});
-			
-			
+				connection.end(function(err){
+					console.log('connection end...');
+				});
+			}
 		});
-	}}
+	}
+	}
